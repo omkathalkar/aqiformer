@@ -242,16 +242,16 @@
               </h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="mailto:om.kathalkar@research.iiit.ac.in" target="_blank">Om Rajendra Kathalkar</a>,
+                  <a href="https://omkathalkar.github.io/" target="_blank">Om Rajendra Kathalkar</a>,
                 </span>
                 <span class="author-block">
-                  <a href="mailto:nitin.nilesh@alumni.iiit.ac.in" target="_blank">Nitin Nilesh</a>,
+                  <a href="https://nitinnilesh.github.io/" target="_blank">Nitin Nilesh</a>,
                 </span>
                 <span class="author-block">
-                  <a href="mailto:sachin.c@iiit.ac.in" target="_blank">Sachin Chaudhari</a>,
+                  <a href="https://faculty.iiit.ac.in/~sachin.c/" target="_blank">Sachin Chaudhari</a>,
                 </span>
                 <span class="author-block">
-                  <a href="mailto:anoop@iiit.ac.in" target="_blank">Anoop Namboodiri</a>
+                  <a href="https://faculty.iiit.ac.in/~anoop/" target="_blank">Anoop Namboodiri</a>
                 </span>
               </div>
 
@@ -276,27 +276,17 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="static/pdfs/aqiformer_supplementary.pdf" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR_GITHUB_USERNAME/aqiformer-icvgip2025" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
+                    <a href="#" class="external-link button is-normal is-rounded is-dark is-static"
+                       aria-disabled="true" onclick="return false;">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                      <span>Code</span>
+                      <span>Code (Coming Soon)</span>
                     </a>
                   </span>
 
                   <span class="link-block">
-                    <a href="https://github.com/YOUR_GITHUB_USERNAME/TRAQID-dataset" target="_blank"
+                    <a href="https://india-data.org/dataset-details/e0f80763-0243-4fc2-8a56-0537824cbd9a" target="_blank"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-database"></i>
@@ -306,12 +296,12 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank"
+                    <a href="https://drive.google.com/file/d/16ULGGd_0R9XCLUe6PRqpZsiZKrSaCyvk/view?usp=sharing" target="_blank"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="ai ai-arxiv"></i>
+                        <i class="fas fa-image"></i>
                       </span>
-                      <span>arXiv</span>
+                      <span>Poster</span>
                     </a>
                   </span>
                 </div>
@@ -322,21 +312,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Teaser video-->
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <video poster="static/images/teaser_frame.png" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/banner_video.mp4" type="video/mp4">
-          </video>
-          <h2 class="subtitle has-text-centered">
-            A 2-minute overview of AQIFormer, showing how dual traffic views and weather-aware transformers enable robust, cross-city air quality classification.
-          </h2>
-        </div>
-      </div>
-    </section>
-    <!-- End teaser video -->
 
     <!-- Paper abstract -->
     <section class="section hero is-light">
@@ -375,91 +350,48 @@
     </section>
     <!-- End paper abstract -->
 
-    <!-- Image carousel -->
+    <!-- Architecture & Attention Maps -->
     <section class="hero is-small">
       <div class="hero-body">
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <img src="static/images/carousel1.jpg" alt="AQIFormer architecture diagram" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">
-                AQIFormer pipeline: dual ResNet50 feature extractors, dual-view fusion, weather-aware transformer, and multi-task heads.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel2.jpg" alt="Attention maps across AQI categories" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">
-                Attention maps highlight exhaust regions, dense traffic zones, and haze as key visual cues across AQI categories.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel3.jpg" alt="Nagpur data collection routes" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">
-                Nagpur measurement campaign covering 150 km of urban routes with synchronized camera and sensor data.
-              </h2>
-            </div>
-            <div class="item">
-              <img src="static/images/carousel4.jpg" alt="Quantitative results and ablation study" loading="lazy"/>
-              <h2 class="subtitle has-text-centered">
-                AQIFormer surpasses prior methods and ablations show the importance of dual views, weather data, and multi-task learning.
-              </h2>
-            </div>
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 has-text-centered">Architecture &amp; Attention Maps</h2>
+          <div class="content">
+            <figure>
+              <img src="static/images/aqiformer_arch.png" alt="AQIFormer architecture diagram" loading="lazy">
+              <figcaption class="has-text-centered">
+                AQIFormer architecture: dual-view ResNet50 feature extraction, weather-aware transformer encoder,
+                and multi-task heads for AQI, time-of-day, and season.
+              </figcaption>
+            </figure>
+            <br>
+            <figure>
+              <img src="static/images/hyde_attentionmap.png" alt="Hyderabad attention maps across AQI categories" loading="lazy">
+              <figcaption class="has-text-centered">
+                Hyderabad attention maps: the model focuses on exhaust plumes, dense traffic regions, and hazy areas
+                as key visual cues for different AQI categories.
+              </figcaption>
+            </figure>
+            <br>
+            <figure>
+              <img src="static/images/hyde_attentionmap.png" alt="Nagpur attention maps across AQI categories" loading="lazy">
+              <figcaption class="has-text-centered">
+                Nagpur attention maps: similar focus on pollution hotspots and congestion zones, illustrating
+                AQIFormer&apos;s cross-city generalization behavior.
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </section>
-    <!-- End image carousel -->
-
-    <!-- Youtube video -->
-    <section class="hero is-small is-light">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3">Video Presentation</h2>
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <div class="publication-video">
-                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End youtube video -->
-
-    <!-- Video carousel -->
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3">Demos & Visualizations</h2>
-          <div id="results-carousel-videos" class="carousel results-carousel">
-            <div class="item item-video1">
-              <video poster="static/images/demo1_poster.png" id="video1" controls muted loop height="100%" preload="metadata">
-                <source src="static/videos/carousel1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-video2">
-              <video poster="static/images/demo2_poster.png" id="video2" controls muted loop height="100%" preload="metadata">
-                <source src="static/videos/carousel2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-video3">
-              <video poster="static/images/demo3_poster.png" id="video3" controls muted loop height="100%" preload="metadata">
-                <source src="static/videos/carousel3.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End video carousel -->
+    <!-- End Architecture & Attention Maps -->
 
     <!-- Paper poster -->
     <section class="hero is-small is-light">
       <div class="hero-body">
         <div class="container">
           <h2 class="title">Poster</h2>
-          <iframe src="static/pdfs/aqiformer_poster.pdf" width="100%" height="550"></iframe>
+          <iframe src="https://drive.google.com/file/d/16ULGGd_0R9XCLUe6PRqpZsiZKrSaCyvk/preview"
+                  width="100%" height="550" allow="autoplay"></iframe>
         </div>
       </div>
     </section>
